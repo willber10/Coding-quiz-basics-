@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <header>
-        <div class="left-corner">
-            <a> View High Scores</a>
-        </div>
-          <div class="right-corner">
-            <!-- Insert countdown timer -->
-            <p>Timer</p>
-        </div>
-    </header>
+    
     <main>
-        <section class="center-content">
+        <!-- quiz -->
+        <section class="center-content" id="quiz">
+            <!-- view highscore button -->
+            <header>
+                <div class="left-corner">
+                    <a onclick="showLeaderBoard()"> View High Scores</a>
+                </div>
+                <!-- timer -->
+                  <div class="right-corner">
+
+                    <p id="time"></p>
+                </div>
+            </header>
             <h1>Coding Quiz Challenge</h1>
             <p id="questions">
                 Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time/score by ten seconds!
@@ -34,6 +38,26 @@
                 <p id="wrong">Wrong!</p>
             </div>
             <button id="startButton" onclick="startQuiz()">Start Quiz</button>
+        </section>
+        <section class="center-content" id="submitScore">
+            <h1>Add your score to the leaderboard</h1>
+            <p id="userScore"></p>
+            <form>
+                <label for="initials">Enter your initials:</label>
+                <input type="text" id="initials" name="initials" placeholder="Your initials" maxlength="3">
+                <input type="submit" value="Submit" id="submitScorebtn">
+            </form>
+        </section>
+        <section class="center-content" id="leaderBoard">
+            <header>
+                <div class="left-corner">
+                    <a onclick="startScreen()"> Go Back to quiz</a>
+                </div>
+            <h1>High scores</h1>
+            <button onclick="resetleaderBoard()">Reset Leaderboard</button>
+            <ol id="scores">
+
+            </ol>
         </section>
     </main>
     <script src="assets/script.js"></script>
