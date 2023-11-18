@@ -57,3 +57,11 @@ main p {
     display: none;
     color: red;
   } 
+
+  #leaderBoard {
+    display: none;
+  }
+
+  #submitScore {
+    display: none;
+  }
