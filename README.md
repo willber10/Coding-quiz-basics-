@@ -26,4 +26,4 @@ https://github.com/willber10/Coding-quiz-basics-
 
 ## License
 
-Please refer to the LICENSE in the repository.
+Please refer to the LICENSE in the repository
