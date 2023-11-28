@@ -8,58 +8,61 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    
     <main>
-        <!-- quiz -->
+      <!-- Quiz container -->
         <section class="center-content" id="quiz">
-            <!-- view highscore button -->
             <header>
-                <div class="left-corner">
-                    <a onclick="showLeaderBoard()"> View High Scores</a>
-                </div>
-                <!-- timer -->
-                  <div class="right-corner">
-
-                    <p id="time"></p>
-                </div>
+              <!-- Toggle Leaderboard -->
+            <div class="left-corner">
+                <a onclick="showLeaderBoard()">View high scores</a>
+              </div>
+              <div class="right-corner">
+                <!-- Quiz timer -->
+                <p id="timeDisplay">Time: 75</p>
+            </div>
             </header>
+            <!-- Quiz -->
             <h1>Coding Quiz Challenge</h1>
-            <p id="questions">
+            <p id="question">
                 Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time/score by ten seconds!
             </p>
             <div class="answers">
-                <button id="btn1">Button 1</button>
-                <button id="btn2">Button 2</button>
-                <button id="btn3">Button 3</button>
-                <button id="btn4">Button 4</button>
+              <button id="btn1">Button 1</button>
+              <button id="btn2">Button 2</button>  
+              <button id="btn3">Button 3</button>
+              <button id="btn4">Button 4</button>
             </div>
             <div>
-                <p id="correct">Correct!</p>
-                <p id="wrong">Wrong!</p>
+              <p id="correct">Correct!</p>
+              <p id="wrong">Wrong!</p>
             </div>
             <button id="startButton" onclick="startQuiz()">Start Quiz</button>
         </section>
-        <section class="center-content" id="submitScore">
-            <h1>Add your score to the leaderboard</h1>
-            <p id="userScore"></p>
-            <form>
-                <label for="initials">Enter your initials:</label>
-                <input type="text" id="initials" name="initials" placeholder="Your initials" maxlength="3">
-                <input type="submit" value="Submit" id="submitScorebtn">
-            </form>
-        </section>
-        <section class="center-content" id="leaderBoard">
-            <header>
-                <div class="left-corner">
-                    <a onclick="startScreen()"> Go Back to quiz</a>
-                </div>
-            <h1>High scores</h1>
-            <button onclick="resetleaderBoard()">Reset Leaderboard</button>
-            <ol id="scores">
 
-            </ol>
+        <section class="center-content" id="submitScore">
+          <h1>Add your score to the leaderboard</h1>
+          <p id="userScore"></p>
+          <form>
+            <label for="initials">Enter initials:</label>
+            <input type="text" id="initials" name="initials" placeholder="Your initials" maxlength="3">
+            <input type="submit" value="Submit" id="submitScoreBtn">
+          </form>
+        </section>
+        <!-- Leaderboard container -->
+        <section class="center-content" id="leaderBoard">
+          <header>
+            <!-- Refresh quiz -->
+            <div class="left-corner">
+              <a onclick="startScreen()">Go Back To Quiz</a>
+            </div>
+            <!-- Leaderboard -->
+          <h1>High Scores</h1>
+          <button onclick="resetLeaderBoard()">Clear high scores</button>
+          <ol id="scores">
+
+          </ol>
         </section>
     </main>
-    <script src="assets/script.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
