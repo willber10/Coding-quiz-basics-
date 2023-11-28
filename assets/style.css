@@ -1,67 +1,102 @@
-.left-corner {
-    position: fixed;
-    top: 5px;
-    left: 10px;
-    font-size: 36px;
-    color: blueviolet;
-  }
-    
-  .right-corner {
-    position: fixed;
-    top: 5px;
-    right: 10px;
-    font-size: 36px;
-  }
-  
-  .center-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  h3 {
-    font-size: 50px;
-    padding-top: 100px;
-  }
-  
+/* CSS has been organized to follow correct semantic structure */
+
+/* Element Selectors */
+
+h1 {
+  font-size: 50px;
+  padding-top: 100px;
+}
+
 main p {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 0;
-    padding-left: 250px;
-    padding-right: 250px;
-  }
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+}
+
+/* Class Selectors */
+
+.left-corner {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 25px;
+  color: blueviolet;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.left-corner:hover {
+  background-color: #e2e6ea;
+}
   
-  button {
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: darkblue;
-    color: white;
-    cursor: pointer;
-  }
+.right-corner {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  font-size: 15px;
+}
 
-  .answers {
-   display: none;
-  }
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
 
-  #correct {
-    display: none;
-    color: green;
-  }
+.answers {
+  display: none;
+  padding-bottom: 20px;
+}
 
-  #wrong {
-    display: none;
-    color: red;
-  } 
+/* ID Selectors */
 
-  #leaderBoard {
-    display: none;
-  }
+#correct {
+  display: none;
+  color: grey;
+  padding-top: 30px;
+  border-top: 3px solid grey;
+}
 
-  #submitScore {
-    display: none;
-  }
+#wrong {
+  display: none;
+  color: grey;
+  padding-top: 30px;
+  border-top: 3px solid grey;
+}
+
+#leaderBoard {
+  display: none;
+}
+
+#submitScore {
+  display: none;
+}
+
+#userScore {
+  color: grey;
+}
+
+#submitScoreBtn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+}
